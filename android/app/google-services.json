@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "977414632510",
+    "project_id": "pesquisa-cafe-3eee9",
+    "storage_bucket": "pesquisa-cafe-3eee9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977414632510:android:4b2a488011ca0fa2b3cd6f",
+        "android_client_info": {
+          "package_name": "com.example.pesquisa_cafe_02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977414632510-9iljhdk4ei9ajv8ub8mvnbv3ge5u42ce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pesquisa_cafe_02",
+            "certificate_hash": "60f214e81a18186bfb8adefffa4d3d25e25664b2"
+          }
+        },
+        {
+          "client_id": "977414632510-llenplordh42kpqlhcg9rk8j911c5i4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJiYLYYKSy-gBVQBl6F8p0CFEE-SkeBZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977414632510-llenplordh42kpqlhcg9rk8j911c5i4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
