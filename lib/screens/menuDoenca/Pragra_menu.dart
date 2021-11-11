@@ -21,6 +21,6 @@ class MenuDoenca extends StatefulWidget {
 class _MenuDoencaState extends State<MenuDoenca> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column();
   }
 }

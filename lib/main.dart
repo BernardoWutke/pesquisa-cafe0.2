@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pesquisa_cafe_02/providers/doenca_provider.dart';
-import 'package:pesquisa_cafe_02/screens/burcarDoenca/BuscarDoenca.dart';
+import 'package:pesquisa_cafe_02/providers/buscar_praga_provider.dart';
+import 'package:pesquisa_cafe_02/screens/burcarDoenca/buscar_praga.dart';
 import 'package:pesquisa_cafe_02/screens/home/HomePage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
@@ -9,7 +9,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MultiProvider(
     providers: [
-      ChangeNotifierProvider(create: (_) => DoencaProvider()),
+      ChangeNotifierProvider(create: (_) => BuscarPragraProvider()),
     ],
     child: MyApp(),
   ));

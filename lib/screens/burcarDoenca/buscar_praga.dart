@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pesquisa_cafe_02/providers/doenca_provider.dart';
+import 'package:pesquisa_cafe_02/providers/buscar_praga_provider.dart';
 import 'package:pesquisa_cafe_02/shareds/colors.dart';
 import 'package:pesquisa_cafe_02/shareds/fonts.dart';
 import 'package:provider/provider.dart';
@@ -27,26 +27,29 @@ class MenuBuscarProduto extends StatefulWidget {
 class _MenuBuscarProdutoState extends State<MenuBuscarProduto> {
   @override
   Widget build(BuildContext context) {
-    var pragas_list = Provider.of<DoencaProvider>(context);
-
+    var pragas_list = Provider.of<BuscarPragraProvider>(context);
+    var pragas = pragas_list.pragas;
     double _heigth = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
     Widget itemList(String txt) {
-      return ListTile(
-        leading: Icon(
-          Icons.arrow_right,
-          color: AppColors.colorWhite,
-          size: 40,
-        ),
-        title: Text(
-          txt,
-          style: AppFonts.titleTileBusca,
+      return GestureDetector(
+        onTap: () => print(txt),
+        child: ListTile(
+          leading: Icon(
+            Icons.search,
+            color: AppColors.colorWhite,
+            size: 40,
+          ),
+          title: Text(
+            txt,
+            style: AppFonts.titleTileBusca,
+          ),
         ),
       );
     }
 
-    return Column(
+    return ListView(
       children: [
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.05,
@@ -62,12 +65,14 @@ class _MenuBuscarProdutoState extends State<MenuBuscarProduto> {
             ),
             Container(
               width: MediaQuery.of(context).size.width * 0.8,
-              child: TextFormField(),
+              child: TextFormField(
+                onChanged: (txt) => pragas_list.searchItem(txt),
+              ),
             ),
             SizedBox(height: _heigth * 0.05),
           ],
         ),
-        for (var item in pragas_list.pragas) itemList(item)
+        for (var item in pragas_list.search_lista) itemList(item)
       ],
     );
   }

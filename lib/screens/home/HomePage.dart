@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pesquisa_cafe_02/providers/buscar_praga_provider.dart';
 import 'package:pesquisa_cafe_02/shareds/colors.dart';
 import 'package:pesquisa_cafe_02/shareds/fonts.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -61,7 +63,10 @@ class MenuHome extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: GestureDetector(
-            onTap: () => Navigator.pushNamed(context, '/findProduto'),
+            onTap: () => {
+              context.read<BuscarPragraProvider>().isLoad = true,
+              Navigator.pushNamed(context, '/findProduto'),
+            },
             child: Card(
                 color: AppColors.colorPrimary,
                 child: Column(
