@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pesquisa_cafe_02/providers/buscar_praga_provider.dart';
+import 'package:pesquisa_cafe_02/providers/pragra_view_provider.dart';
 import 'package:pesquisa_cafe_02/screens/burcarDoenca/buscar_praga.dart';
 import 'package:pesquisa_cafe_02/screens/home/HomePage.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:pesquisa_cafe_02/screens/menuDoenca/praga_view.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -10,6 +12,7 @@ void main() {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => BuscarPragraProvider()),
+      ChangeNotifierProvider(create: (_) => PragaMenuProvider()),
     ],
     child: MyApp(),
   ));
@@ -42,12 +45,13 @@ class _MyAppState extends State<MyApp> {
           return MaterialApp(
             title: 'Flutter Demo',
             theme: ThemeData(
-              primarySwatch: Colors.blue,
+              primarySwatch: Colors.teal,
             ),
             initialRoute: '/home',
             routes: {
               '/home': (BuildContext context) => HomePage(),
               '/findProduto': (BuildContext context) => BuscarProduto(),
+              PragaView.routeName: (context) => const PragaView(),
             },
           );
         }

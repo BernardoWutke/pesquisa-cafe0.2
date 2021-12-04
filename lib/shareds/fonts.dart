@@ -7,6 +7,11 @@ class AppFonts {
       fontSize: 28,
       fontWeight: FontWeight.w600,
       color: AppColors.colorTitleHOme);
+  static TextStyle titlePraga = GoogleFonts.nunitoSans(
+      fontSize: 30,
+      fontWeight: FontWeight.w800,
+      color: AppColors.colorTitleHOme);
+
   static TextStyle titleMenusHome = GoogleFonts.nunitoSans(
       fontSize: 22,
       fontWeight: FontWeight.w300,
@@ -15,4 +20,15 @@ class AppFonts {
       fontSize: 22,
       fontWeight: FontWeight.w300,
       color: AppColors.colorTitleHOme);
+
+  static TextStyle titleSobrePraga = GoogleFonts.nunitoSans(
+      fontSize: 22,
+      fontWeight: FontWeight.w800,
+      color: AppColors.colorTitleMenuPrimaryHome);
+
+  static TextStyle sobrePraga = GoogleFonts.nunitoSans(
+    fontSize: 19,
+    fontWeight: FontWeight.w300,
+    color: AppColors.colorTitleHOme,
+  );
 }
